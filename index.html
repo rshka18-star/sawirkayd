@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="so">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#111111" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SawirKayd">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="style.css">
+  <title>SawirKayd</title>
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>SawirKayd</h1>
+      <p>Sawirradaada ku kaydi gudaha app-ka</p>
+    </div>
+    <button id="addBtn" class="primary">+ Ku dar</button>
+    <input id="fileInput" type="file" accept="image/*" multiple hidden>
+  </header>
+
+  <main>
+    <section id="emptyState" class="empty">
+      <div class="empty-icon">🖼️</div>
+      <h2>Weli sawir ma jiro</h2>
+      <p>Taabo “+ Ku dar” si aad sawir uga soo geliso iPhone ama laptop-ka.</p>
+    </section>
+
+    <section id="gallery" class="gallery" aria-label="Sawirrada"></section>
+  </main>
+
+  <dialog id="viewer">
+    <div class="viewer-wrap">
+      <button id="closeViewer" class="icon-btn" aria-label="Xir">✕</button>
+      <img id="viewerImage" alt="Sawir weyn">
+      <div class="viewer-actions">
+        <button id="deleteBtn" class="danger">Tirtir</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+:root{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:#f4f4f5;color:#111;
+}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh}
+.topbar{
+  position:sticky;top:0;z-index:10;
+  display:flex;gap:14px;align-items:center;justify-content:space-between;
+  padding:18px max(18px,env(safe-area-inset-left));
+  padding-top:max(18px,env(safe-area-inset-top));
+  background:rgba(255,255,255,.94);backdrop-filter:blur(18px);
+  border-bottom:1px solid #e5e5e7;
+}
+.topbar h1{margin:0;font-size:28px}
+.topbar p{margin:3px 0 0;color:#666;font-size:13px}
+button{font:inherit;border:0;border-radius:12px;padding:11px 14px;cursor:pointer}
+.primary{background:#111;color:#fff;font-weight:650}
+main{padding:16px}
+.empty{
+  max-width:560px;margin:16vh auto 0;text-align:center;color:#666;
+  padding:30px
+}
+.empty-icon{font-size:48px}
+.empty h2{color:#111;margin-bottom:8px}
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:7px;
+}
+.card{
+  aspect-ratio:1/1;border-radius:12px;overflow:hidden;background:#ddd;
+}
+.card img{width:100%;height:100%;object-fit:cover;display:block}
+dialog{
+  border:0;padding:0;background:#000;width:100vw;height:100vh;max-width:none;max-height:none;
+}
+dialog::backdrop{background:#000}
+.viewer-wrap{position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center}
+#viewerImage{max-width:100%;max-height:100%;object-fit:contain}
+.icon-btn{
+  position:absolute;top:max(18px,env(safe-area-inset-top));right:18px;
+  background:rgba(255,255,255,.18);color:#fff;font-size:20px
+}
+.viewer-actions{
+  position:absolute;bottom:max(22px,env(safe-area-inset-bottom));left:0;right:0;text-align:center
+}
+.danger{background:#dc2626;color:white;font-weight:650}
+@media(min-width:700px){
+  .gallery{grid-template-columns:repeat(5,1fr);gap:10px}
+  main{max-width:1100px;margin:auto}
+}
